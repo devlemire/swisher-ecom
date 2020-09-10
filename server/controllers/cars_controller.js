@@ -1,7 +1,6 @@
 const cars = require("../data/cars.json");
 
 exports.getAllCars = (req, res, next) => {
-  console.log("HIT");
   res.status(200).send(cars);
 };
 
