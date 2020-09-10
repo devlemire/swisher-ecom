@@ -17,12 +17,10 @@ app.use(morgan("dev"));
 // Serve client assets
 app.use(express.static(`${__dirname}/../client/build`));
 
-// app.get("/api/v1/cars", (req, res, next) => res.status(200).send());
-
 // Api Endpoints
 app.use("/api/v1", v1Router);
 
-// Send the React app since using Client side routing
+// Send the React app on all other requests since using Client side routing
 app.get("*", (req, res, next) => {
   res.sendFile(path.resolve(`${__dirname}/../client/build/index.html`));
 });
