@@ -19,6 +19,10 @@ export default function AgeVerification({ setAgeVerified }) {
     window.sessionStorage.setItem("verified", "true");
   };
 
+  const handleUnderAge = () => {
+    window.history.back();
+  };
+
   return (
     <AgeVerificationContainer>
       <Backdrop />
@@ -33,7 +37,10 @@ export default function AgeVerification({ setAgeVerified }) {
 
         <ActionsContainer>
           <ActionButton onClick={handleVerify}>Verify</ActionButton>
-          <ActionSpan style={{ marginLeft: "8px" }}>Go back</ActionSpan>
+
+          <ActionSpan style={{ marginLeft: "8px" }} onClick={handleUnderAge}>
+            Go back
+          </ActionSpan>
         </ActionsContainer>
       </Modal>
     </AgeVerificationContainer>
