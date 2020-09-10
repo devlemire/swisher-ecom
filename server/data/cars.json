@@ -15,7 +15,8 @@
     "carModelYear": 1991,
     "carDescription": "in faucibus orci luctus et ultrices posuere cubilia curae nulla dapibus dolor vel est donec odio justo sollicitudin ut suscipit a feugiat et eros vestibulum ac est lacinia nisi venenatis tristique fusce congue diam id ornare imperdiet sapien",
     "carPrice": 20669.79,
-    "carColor": "Goldenrod"
+    "carColor": "Goldenrod",
+    "featured": true
   },
   {
     "carId": 3,
@@ -24,7 +25,8 @@
     "carModelYear": 1992,
     "carDescription": "lectus in quam fringilla rhoncus mauris enim leo rhoncus sed vestibulum sit amet cursus id turpis integer aliquet massa id lobortis convallis tortor risus dapibus augue vel accumsan tellus nisi eu orci mauris lacinia sapien quis libero nullam sit amet turpis elementum ligula vehicula",
     "carPrice": 3288.11,
-    "carColor": "Fuscia"
+    "carColor": "Fuscia",
+    "featured": true
   },
   {
     "carId": 4,
@@ -33,7 +35,8 @@
     "carModelYear": 1998,
     "carDescription": "quisque id justo sit amet sapien dignissim vestibulum vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae nulla dapibus dolor vel est donec",
     "carPrice": 13110.19,
-    "carColor": "Crimson"
+    "carColor": "Crimson",
+    "featured": true
   },
   {
     "carId": 5,
@@ -60,7 +63,8 @@
     "carModelYear": 2008,
     "carDescription": "posuere cubilia curae nulla dapibus dolor vel est donec odio justo sollicitudin ut suscipit a feugiat et eros vestibulum ac est lacinia nisi venenatis tristique fusce congue diam id ornare imperdiet sapien urna pretium nisl ut volutpat sapien arcu sed augue aliquam erat volutpat in",
     "carPrice": 76358.09,
-    "carColor": "Blue"
+    "carColor": "Blue",
+    "featured": true
   },
   {
     "carId": 8,
@@ -87,7 +91,8 @@
     "carModelYear": 2001,
     "carDescription": "nunc nisl duis bibendum felis sed interdum venenatis turpis enim blandit mi in porttitor pede justo eu massa donec dapibus duis at velit eu est congue elementum in hac habitasse platea dictumst morbi vestibulum velit id pretium iaculis diam erat fermentum justo nec",
     "carPrice": 22943.27,
-    "carColor": "Green"
+    "carColor": "Green",
+    "featured": true
   },
   {
     "carId": 11,
@@ -132,7 +137,8 @@
     "carModelYear": 2012,
     "carDescription": "tempus semper est quam pharetra magna ac consequat metus sapien ut nunc vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae mauris viverra diam vitae",
     "carPrice": 60031.65,
-    "carColor": "Aquamarine"
+    "carColor": "Aquamarine",
+    "featured": true
   },
   {
     "carId": 16,
@@ -177,7 +183,8 @@
     "carModelYear": 1982,
     "carDescription": "mi pede malesuada in imperdiet et commodo vulputate justo in blandit ultrices enim lorem ipsum dolor sit amet consectetuer adipiscing elit proin interdum mauris non ligula pellentesque ultrices phasellus id sapien in sapien iaculis congue vivamus metus arcu",
     "carPrice": 21804.54,
-    "carColor": "Purple"
+    "carColor": "Purple",
+    "featured": true
   },
   {
     "carId": 21,
@@ -231,7 +238,8 @@
     "carModelYear": 1996,
     "carDescription": "ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae donec pharetra magna vestibulum aliquet ultrices erat tortor sollicitudin mi sit amet lobortis sapien sapien non mi integer ac neque duis bibendum morbi non quam nec",
     "carPrice": 30466.52,
-    "carColor": "Pink"
+    "carColor": "Pink",
+    "featured": true
   },
   {
     "carId": 27,
@@ -285,7 +293,8 @@
     "carModelYear": 1998,
     "carDescription": "at dolor quis odio consequat varius integer ac leo pellentesque ultrices mattis odio donec vitae nisi nam ultrices libero non mattis pulvinar nulla pede ullamcorper augue a",
     "carPrice": 19782.08,
-    "carColor": "Pink"
+    "carColor": "Pink",
+    "featured": true
   },
   {
     "carId": 33,
@@ -339,7 +348,8 @@
     "carModelYear": 2005,
     "carDescription": "mi pede malesuada in imperdiet et commodo vulputate justo in blandit ultrices enim lorem ipsum dolor sit amet consectetuer adipiscing elit proin interdum mauris non ligula pellentesque ultrices phasellus id sapien in sapien iaculis congue vivamus metus arcu adipiscing molestie hendrerit at vulputate vitae nisl aenean lectus pellentesque",
     "carPrice": 40260.71,
-    "carColor": "Yellow"
+    "carColor": "Yellow",
+    "featured": true
   },
   {
     "carId": 39,
@@ -384,7 +394,8 @@
     "carModelYear": 2006,
     "carDescription": "vehicula consequat morbi a ipsum integer a nibh in quis justo maecenas rhoncus aliquam lacus morbi quis tortor id nulla ultrices aliquet maecenas leo odio condimentum id luctus nec molestie sed justo pellentesque viverra pede ac diam cras pellentesque volutpat dui maecenas tristique est",
     "carPrice": 36138.71,
-    "carColor": "Maroon"
+    "carColor": "Maroon",
+    "featured": true
   },
   {
     "carId": 44,
@@ -438,7 +449,8 @@
     "carModelYear": 2010,
     "carDescription": "luctus et ultrices posuere cubilia curae duis faucibus accumsan odio curabitur convallis duis consequat dui nec nisi volutpat eleifend donec ut dolor morbi vel lectus in quam fringilla rhoncus mauris enim leo rhoncus sed vestibulum sit amet cursus id turpis",
     "carPrice": 57637.53,
-    "carColor": "Puce"
+    "carColor": "Puce",
+    "featured": true
   },
   {
     "carId": 50,
@@ -483,7 +495,8 @@
     "carModelYear": 1998,
     "carDescription": "sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus etiam vel augue vestibulum rutrum rutrum neque aenean auctor gravida sem praesent id massa id nisl venenatis lacinia aenean sit amet justo morbi ut odio cras mi pede malesuada in imperdiet et commodo",
     "carPrice": 90764.89,
-    "carColor": "Maroon"
+    "carColor": "Maroon",
+    "featured": true
   },
   {
     "carId": 55,
@@ -519,7 +532,8 @@
     "carModelYear": 2007,
     "carDescription": "justo etiam pretium iaculis justo in hac habitasse platea dictumst etiam faucibus cursus urna ut tellus nulla ut erat id mauris vulputate elementum nullam varius nulla facilisi cras non velit nec nisi vulputate nonummy maecenas tincidunt lacus at velit",
     "carPrice": 81811.8,
-    "carColor": "Green"
+    "carColor": "Green",
+    "featured": true
   },
   {
     "carId": 59,
@@ -546,7 +560,8 @@
     "carModelYear": 2006,
     "carDescription": "tristique fusce congue diam id ornare imperdiet sapien urna pretium nisl ut volutpat sapien arcu sed augue aliquam erat volutpat in congue etiam justo etiam pretium iaculis justo in",
     "carPrice": 24102.81,
-    "carColor": "Puce"
+    "carColor": "Puce",
+    "featured": true
   },
   {
     "carId": 62,
@@ -573,7 +588,8 @@
     "carModelYear": 1997,
     "carDescription": "lacus at velit vivamus vel nulla eget eros elementum pellentesque quisque porta volutpat erat quisque erat eros viverra eget congue eget semper rutrum nulla nunc purus",
     "carPrice": 20799.58,
-    "carColor": "Purple"
+    "carColor": "Purple",
+    "featured": true
   },
   {
     "carId": 65,
@@ -618,7 +634,8 @@
     "carModelYear": 2010,
     "carDescription": "ut mauris eget massa tempor convallis nulla neque libero convallis eget eleifend luctus ultricies eu nibh quisque id justo sit amet sapien dignissim vestibulum vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae",
     "carPrice": 19423.04,
-    "carColor": "Khaki"
+    "carColor": "Khaki",
+    "featured": true
   },
   {
     "carId": 70,
@@ -636,7 +653,8 @@
     "carModelYear": 1995,
     "carDescription": "ultrices posuere cubilia curae donec pharetra magna vestibulum aliquet ultrices erat tortor sollicitudin mi sit amet lobortis sapien sapien non mi integer ac neque duis bibendum morbi non quam nec dui",
     "carPrice": 84402.46,
-    "carColor": "Indigo"
+    "carColor": "Indigo",
+    "featured": true
   },
   {
     "carId": 72,
@@ -663,7 +681,8 @@
     "carModelYear": 2009,
     "carDescription": "ante vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae duis faucibus accumsan odio curabitur convallis duis consequat dui nec nisi volutpat eleifend donec ut dolor",
     "carPrice": 50588.15,
-    "carColor": "Red"
+    "carColor": "Red",
+    "featured": true
   },
   {
     "carId": 75,
@@ -672,7 +691,8 @@
     "carModelYear": 2006,
     "carDescription": "dictumst morbi vestibulum velit id pretium iaculis diam erat fermentum justo nec condimentum neque sapien placerat ante nulla justo aliquam quis turpis eget elit sodales scelerisque mauris sit amet",
     "carPrice": 17855.31,
-    "carColor": "Yellow"
+    "carColor": "Yellow",
+    "featured": true
   },
   {
     "carId": 76,
@@ -681,7 +701,8 @@
     "carModelYear": 2003,
     "carDescription": "eros vestibulum ac est lacinia nisi venenatis tristique fusce congue diam id ornare imperdiet sapien urna pretium nisl ut volutpat sapien arcu sed augue aliquam erat volutpat in congue etiam justo etiam pretium iaculis justo in hac habitasse platea dictumst etiam faucibus cursus urna ut tellus nulla",
     "carPrice": 21737.05,
-    "carColor": "Violet"
+    "carColor": "Violet",
+    "featured": true
   },
   {
     "carId": 77,
@@ -690,7 +711,8 @@
     "carModelYear": 2010,
     "carDescription": "pellentesque quisque porta volutpat erat quisque erat eros viverra eget congue eget semper rutrum nulla nunc purus phasellus in felis donec semper sapien a libero nam dui proin leo odio porttitor id consequat in consequat ut nulla sed",
     "carPrice": 4151.52,
-    "carColor": "Crimson"
+    "carColor": "Crimson",
+    "featured": true
   },
   {
     "carId": 78,
@@ -699,7 +721,8 @@
     "carModelYear": 2007,
     "carDescription": "dui vel nisl duis ac nibh fusce lacus purus aliquet at feugiat non pretium quis lectus suspendisse potenti in eleifend quam a odio in hac habitasse platea dictumst maecenas ut massa quis augue luctus tincidunt nulla mollis molestie lorem quisque ut erat curabitur gravida nisi at nibh in hac",
     "carPrice": 58026.06,
-    "carColor": "Teal"
+    "carColor": "Teal",
+    "featured": true
   },
   {
     "carId": 79,
@@ -744,7 +767,8 @@
     "carModelYear": 2006,
     "carDescription": "duis ac nibh fusce lacus purus aliquet at feugiat non pretium quis lectus suspendisse potenti in eleifend quam a odio in hac habitasse platea dictumst maecenas ut massa quis augue",
     "carPrice": 12942.25,
-    "carColor": "Maroon"
+    "carColor": "Maroon",
+    "featured": true
   },
   {
     "carId": 84,
@@ -789,7 +813,8 @@
     "carModelYear": 2001,
     "carDescription": "pede libero quis orci nullam molestie nibh in lectus pellentesque at nulla suspendisse potenti cras in purus eu magna vulputate luctus cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus vivamus vestibulum sagittis sapien cum sociis natoque penatibus et magnis",
     "carPrice": 71224.94,
-    "carColor": "Teal"
+    "carColor": "Teal",
+    "featured": true
   },
   {
     "carId": 89,
@@ -798,7 +823,8 @@
     "carModelYear": 1986,
     "carDescription": "ac nibh fusce lacus purus aliquet at feugiat non pretium quis lectus suspendisse potenti in eleifend quam a odio in hac habitasse platea dictumst maecenas ut massa quis augue luctus tincidunt nulla mollis molestie lorem quisque ut erat curabitur gravida nisi at nibh in hac habitasse platea dictumst",
     "carPrice": 73307.48,
-    "carColor": "Yellow"
+    "carColor": "Yellow",
+    "nearYou": true
   },
   {
     "carId": 90,
@@ -816,7 +842,8 @@
     "carModelYear": 2013,
     "carDescription": "cubilia curae duis faucibus accumsan odio curabitur convallis duis consequat dui nec nisi volutpat eleifend donec ut dolor morbi vel lectus in quam fringilla rhoncus mauris enim",
     "carPrice": 95946.82,
-    "carColor": "Teal"
+    "carColor": "Teal",
+    "nearYou": true
   },
   {
     "carId": 92,
@@ -861,7 +888,8 @@
     "carModelYear": 1995,
     "carDescription": "pellentesque eget nunc donec quis orci eget orci vehicula condimentum curabitur in libero ut massa volutpat convallis morbi odio odio elementum eu interdum eu tincidunt in leo maecenas pulvinar lobortis",
     "carPrice": 80715.12,
-    "carColor": "Violet"
+    "carColor": "Violet",
+    "nearYou": true
   },
   {
     "carId": 97,
@@ -915,7 +943,8 @@
     "carModelYear": 2007,
     "carDescription": "dapibus dolor vel est donec odio justo sollicitudin ut suscipit a feugiat et eros vestibulum ac est lacinia nisi venenatis tristique fusce congue diam id ornare imperdiet sapien urna pretium nisl ut volutpat sapien arcu sed augue aliquam erat volutpat in congue",
     "carPrice": 78184.06,
-    "carColor": "Purple"
+    "carColor": "Purple",
+    "nearYou": true
   },
   {
     "carId": 103,
@@ -951,7 +980,8 @@
     "carModelYear": 2007,
     "carDescription": "fusce posuere felis sed lacus morbi sem mauris laoreet ut rhoncus aliquet pulvinar sed nisl nunc rhoncus dui vel sem sed sagittis nam congue risus semper porta volutpat quam pede lobortis ligula sit amet eleifend",
     "carPrice": 97076.63,
-    "carColor": "Purple"
+    "carColor": "Purple",
+    "nearYou": true
   },
   {
     "carId": 107,
@@ -987,7 +1017,8 @@
     "carModelYear": 1997,
     "carDescription": "ut at dolor quis odio consequat varius integer ac leo pellentesque ultrices mattis odio donec vitae nisi nam ultrices libero non mattis pulvinar nulla pede ullamcorper augue a suscipit nulla elit ac nulla sed vel enim sit amet nunc viverra dapibus nulla suscipit ligula in lacus curabitur at ipsum ac",
     "carPrice": 23574.62,
-    "carColor": "Yellow"
+    "carColor": "Yellow",
+    "nearYou": true
   },
   {
     "carId": 111,
@@ -1032,7 +1063,8 @@
     "carModelYear": 2000,
     "carDescription": "tristique in tempus sit amet sem fusce consequat nulla nisl nunc nisl duis bibendum felis sed interdum venenatis turpis enim blandit mi in porttitor pede justo eu massa donec dapibus duis at velit eu est congue elementum in hac habitasse platea dictumst morbi vestibulum velit id",
     "carPrice": 48598.28,
-    "carColor": "Violet"
+    "carColor": "Violet",
+    "nearYou": true
   },
   {
     "carId": 116,
@@ -1077,7 +1109,8 @@
     "carModelYear": 1994,
     "carDescription": "diam in magna bibendum imperdiet nullam orci pede venenatis non sodales sed tincidunt eu felis fusce posuere felis sed lacus morbi sem mauris laoreet ut rhoncus aliquet pulvinar sed",
     "carPrice": 89670.54,
-    "carColor": "Red"
+    "carColor": "Red",
+    "nearYou": true
   },
   {
     "carId": 121,
@@ -1122,7 +1155,8 @@
     "carModelYear": 2002,
     "carDescription": "nec euismod scelerisque quam turpis adipiscing lorem vitae mattis nibh ligula nec sem duis aliquam convallis nunc proin at turpis a pede posuere nonummy integer non velit donec diam neque vestibulum eget vulputate ut ultrices vel augue vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia",
     "carPrice": 92556.7,
-    "carColor": "Aquamarine"
+    "carColor": "Aquamarine",
+    "nearYou": true
   },
   {
     "carId": 126,
@@ -1158,7 +1192,8 @@
     "carModelYear": 2005,
     "carDescription": "tempor turpis nec euismod scelerisque quam turpis adipiscing lorem vitae mattis nibh ligula nec sem duis aliquam convallis nunc proin at turpis a pede posuere nonummy integer non velit donec diam neque",
     "carPrice": 58549.4,
-    "carColor": "Orange"
+    "carColor": "Orange",
+    "nearYou": true
   },
   {
     "carId": 130,
@@ -1194,7 +1229,8 @@
     "carModelYear": 1998,
     "carDescription": "curabitur in libero ut massa volutpat convallis morbi odio odio elementum eu interdum eu tincidunt in leo maecenas pulvinar lobortis est phasellus sit amet erat nulla tempus vivamus in felis eu sapien cursus vestibulum proin eu",
     "carPrice": 18029.5,
-    "carColor": "Purple"
+    "carColor": "Purple",
+    "nearYou": true
   },
   {
     "carId": 134,
@@ -1239,7 +1275,8 @@
     "carModelYear": 2008,
     "carDescription": "hac habitasse platea dictumst maecenas ut massa quis augue luctus tincidunt nulla mollis molestie lorem quisque ut erat curabitur gravida nisi at nibh in hac habitasse platea dictumst aliquam augue quam sollicitudin vitae consectetuer eget rutrum at lorem integer tincidunt ante vel",
     "carPrice": 19736.31,
-    "carColor": "Goldenrod"
+    "carColor": "Goldenrod",
+    "nearYou": true
   },
   {
     "carId": 139,
@@ -1275,7 +1312,8 @@
     "carModelYear": 1986,
     "carDescription": "luctus et ultrices posuere cubilia curae mauris viverra diam vitae quam suspendisse potenti nullam porttitor lacus at turpis donec posuere metus vitae ipsum aliquam non mauris morbi non lectus aliquam sit amet diam in magna bibendum imperdiet nullam orci pede",
     "carPrice": 55529.17,
-    "carColor": "Teal"
+    "carColor": "Teal",
+    "nearYou": true
   },
   {
     "carId": 143,
@@ -1311,7 +1349,8 @@
     "carModelYear": 2004,
     "carDescription": "erat nulla tempus vivamus in felis eu sapien cursus vestibulum proin eu mi nulla ac enim in tempor turpis nec euismod scelerisque quam turpis adipiscing lorem vitae mattis nibh ligula nec sem duis aliquam convallis nunc proin at turpis a pede posuere nonummy integer non velit donec diam neque",
     "carPrice": 59653.91,
-    "carColor": "Orange"
+    "carColor": "Orange",
+    "hotDeal": true
   },
   {
     "carId": 147,
@@ -1329,7 +1368,8 @@
     "carModelYear": 1993,
     "carDescription": "duis aliquam convallis nunc proin at turpis a pede posuere nonummy integer non velit donec diam neque vestibulum eget vulputate ut ultrices vel augue vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae",
     "carPrice": 72389.69,
-    "carColor": "Violet"
+    "carColor": "Violet",
+    "hotDeal": true
   },
   {
     "carId": 149,
@@ -1356,7 +1396,8 @@
     "carModelYear": 1969,
     "carDescription": "felis sed lacus morbi sem mauris laoreet ut rhoncus aliquet pulvinar sed nisl nunc rhoncus dui vel sem sed sagittis nam congue risus semper porta volutpat quam",
     "carPrice": 3420.22,
-    "carColor": "Yellow"
+    "carColor": "Yellow",
+    "hotDeal": true
   },
   {
     "carId": 152,
@@ -1365,7 +1406,8 @@
     "carModelYear": 1999,
     "carDescription": "pellentesque at nulla suspendisse potenti cras in purus eu magna vulputate luctus cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus vivamus vestibulum sagittis sapien cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus etiam vel augue vestibulum rutrum rutrum neque aenean",
     "carPrice": 7820.97,
-    "carColor": "Aquamarine"
+    "carColor": "Aquamarine",
+    "hotDeal": true
   },
   {
     "carId": 153,
@@ -1392,7 +1434,8 @@
     "carModelYear": 2004,
     "carDescription": "augue vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae donec pharetra magna vestibulum aliquet ultrices erat tortor sollicitudin mi sit amet lobortis sapien sapien non mi integer ac neque duis bibendum morbi non",
     "carPrice": 12374.63,
-    "carColor": "Puce"
+    "carColor": "Puce",
+    "hotDeal": true
   },
   {
     "carId": 156,
@@ -1419,7 +1462,8 @@
     "carModelYear": 1999,
     "carDescription": "blandit mi in porttitor pede justo eu massa donec dapibus duis at velit eu est congue elementum in hac habitasse platea dictumst morbi vestibulum velit id pretium iaculis diam erat fermentum",
     "carPrice": 72730.82,
-    "carColor": "Crimson"
+    "carColor": "Crimson",
+    "hotDeal": true
   },
   {
     "carId": 159,
@@ -1455,7 +1499,8 @@
     "carModelYear": 2011,
     "carDescription": "luctus rutrum nulla tellus in sagittis dui vel nisl duis ac nibh fusce lacus purus aliquet at feugiat non pretium quis lectus suspendisse potenti in eleifend quam a odio in hac habitasse platea dictumst maecenas ut massa quis augue luctus",
     "carPrice": 98719.27,
-    "carColor": "Aquamarine"
+    "carColor": "Aquamarine",
+    "hotDeal": true
   },
   {
     "carId": 163,
@@ -1482,7 +1527,8 @@
     "carModelYear": 1998,
     "carDescription": "tempus sit amet sem fusce consequat nulla nisl nunc nisl duis bibendum felis sed interdum venenatis turpis enim blandit mi in porttitor pede justo eu massa donec dapibus duis at velit eu est congue elementum in hac habitasse platea dictumst",
     "carPrice": 39966.42,
-    "carColor": "Goldenrod"
+    "carColor": "Goldenrod",
+    "hotDeal": true
   },
   {
     "carId": 166,
@@ -1509,7 +1555,8 @@
     "carModelYear": 2009,
     "carDescription": "morbi porttitor lorem id ligula suspendisse ornare consequat lectus in est risus auctor sed tristique in tempus sit amet sem fusce consequat nulla nisl nunc nisl duis",
     "carPrice": 64140.33,
-    "carColor": "Blue"
+    "carColor": "Blue",
+    "hotDeal": true
   },
   {
     "carId": 169,
@@ -1536,7 +1583,8 @@
     "carModelYear": 1993,
     "carDescription": "dolor sit amet consectetuer adipiscing elit proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae duis faucibus accumsan odio curabitur convallis duis consequat dui nec nisi volutpat",
     "carPrice": 45187.99,
-    "carColor": "Khaki"
+    "carColor": "Khaki",
+    "hotDeal": true
   },
   {
     "carId": 172,
@@ -1545,7 +1593,8 @@
     "carModelYear": 1993,
     "carDescription": "quis lectus suspendisse potenti in eleifend quam a odio in hac habitasse platea dictumst maecenas ut massa quis augue luctus tincidunt nulla mollis molestie lorem quisque ut erat",
     "carPrice": 87739.07,
-    "carColor": "Indigo"
+    "carColor": "Indigo",
+    "hotDeal": true
   },
   {
     "carId": 173,
@@ -1572,7 +1621,8 @@
     "carModelYear": 1994,
     "carDescription": "blandit mi in porttitor pede justo eu massa donec dapibus duis at velit eu est congue elementum in hac habitasse platea dictumst morbi vestibulum velit id pretium iaculis diam erat fermentum justo nec condimentum neque sapien placerat ante nulla justo aliquam quis turpis eget elit sodales scelerisque mauris sit amet",
     "carPrice": 94981.83,
-    "carColor": "Purple"
+    "carColor": "Purple",
+    "hotDeal": true
   },
   {
     "carId": 176,
@@ -1608,7 +1658,8 @@
     "carModelYear": 2009,
     "carDescription": "nam ultrices libero non mattis pulvinar nulla pede ullamcorper augue a suscipit nulla elit ac nulla sed vel enim sit amet nunc viverra dapibus nulla suscipit ligula in lacus curabitur at ipsum ac tellus semper interdum mauris ullamcorper purus sit amet nulla quisque arcu libero rutrum ac lobortis vel",
     "carPrice": 4723.74,
-    "carColor": "Pink"
+    "carColor": "Pink",
+    "hotDeal": true
   },
   {
     "carId": 180,
@@ -1644,7 +1695,8 @@
     "carModelYear": 1987,
     "carDescription": "orci pede venenatis non sodales sed tincidunt eu felis fusce posuere felis sed lacus morbi sem mauris laoreet ut rhoncus aliquet pulvinar sed nisl nunc rhoncus dui",
     "carPrice": 54280.77,
-    "carColor": "Violet"
+    "carColor": "Violet",
+    "hotDeal": true
   },
   {
     "carId": 184,
@@ -1662,7 +1714,8 @@
     "carModelYear": 2008,
     "carDescription": "volutpat quam pede lobortis ligula sit amet eleifend pede libero quis orci nullam molestie nibh in lectus pellentesque at nulla suspendisse potenti cras in purus eu magna vulputate luctus cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus vivamus",
     "carPrice": 60729.18,
-    "carColor": "Mauv"
+    "carColor": "Mauv",
+    "hotDeal": true
   },
   {
     "carId": 186,
@@ -1689,7 +1742,8 @@
     "carModelYear": 1999,
     "carDescription": "rhoncus dui vel sem sed sagittis nam congue risus semper porta volutpat quam pede lobortis ligula sit amet eleifend pede libero quis orci nullam molestie nibh in lectus pellentesque at nulla suspendisse potenti cras in purus eu magna vulputate luctus cum sociis natoque penatibus et magnis dis parturient montes",
     "carPrice": 49321.65,
-    "carColor": "Violet"
+    "carColor": "Violet",
+    "hotDeal": true
   },
   {
     "carId": 189,
@@ -1716,7 +1770,8 @@
     "carModelYear": 2005,
     "carDescription": "velit eu est congue elementum in hac habitasse platea dictumst morbi vestibulum velit id pretium iaculis diam erat fermentum justo nec condimentum neque sapien placerat ante nulla justo aliquam quis turpis eget elit sodales scelerisque mauris sit amet eros",
     "carPrice": 81670.23,
-    "carColor": "Yellow"
+    "carColor": "Yellow",
+    "hotDeal": true
   },
   {
     "carId": 192,
@@ -1734,7 +1789,8 @@
     "carModelYear": 1992,
     "carDescription": "curae duis faucibus accumsan odio curabitur convallis duis consequat dui nec nisi volutpat eleifend donec ut dolor morbi vel lectus in quam fringilla rhoncus mauris enim leo rhoncus sed vestibulum sit amet cursus id turpis integer aliquet massa",
     "carPrice": 28974.89,
-    "carColor": "Yellow"
+    "carColor": "Yellow",
+    "hotDeal": true
   },
   {
     "carId": 194,
@@ -1770,7 +1826,8 @@
     "carModelYear": 2004,
     "carDescription": "mauris vulputate elementum nullam varius nulla facilisi cras non velit nec nisi vulputate nonummy maecenas tincidunt lacus at velit vivamus vel nulla eget eros elementum pellentesque quisque porta volutpat erat quisque erat eros viverra eget congue eget semper rutrum nulla nunc purus phasellus",
     "carPrice": 42697.69,
-    "carColor": "Turquoise"
+    "carColor": "Turquoise",
+    "hotDeal": true
   },
   {
     "carId": 198,
@@ -1815,7 +1872,8 @@
     "carModelYear": 2006,
     "carDescription": "ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae nulla dapibus dolor vel est donec odio justo sollicitudin ut suscipit a feugiat et eros vestibulum ac est lacinia nisi venenatis tristique fusce congue diam id ornare imperdiet sapien urna pretium nisl ut",
     "carPrice": 44754.1,
-    "carColor": "Yellow"
+    "carColor": "Yellow",
+    "hotDeal": true
   },
   {
     "carId": 203,
@@ -1833,7 +1891,8 @@
     "carModelYear": 2011,
     "carDescription": "id nulla ultrices aliquet maecenas leo odio condimentum id luctus nec molestie sed justo pellentesque viverra pede ac diam cras pellentesque volutpat dui maecenas tristique est et tempus semper est quam pharetra magna ac consequat",
     "carPrice": 24148.53,
-    "carColor": "Blue"
+    "carColor": "Blue",
+    "hotDeal": true
   },
   {
     "carId": 205,
@@ -1842,7 +1901,8 @@
     "carModelYear": 2008,
     "carDescription": "eget massa tempor convallis nulla neque libero convallis eget eleifend luctus ultricies eu nibh quisque id justo sit amet sapien dignissim vestibulum vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae nulla dapibus dolor vel est donec",
     "carPrice": 67478.31,
-    "carColor": "Puce"
+    "carColor": "Puce",
+    "hotDeal": true
   },
   {
     "carId": 206,
@@ -1878,7 +1938,8 @@
     "carModelYear": 2010,
     "carDescription": "sapien quis libero nullam sit amet turpis elementum ligula vehicula consequat morbi a ipsum integer a nibh in quis justo maecenas rhoncus aliquam lacus morbi quis tortor id nulla ultrices aliquet maecenas leo odio condimentum id luctus nec molestie sed justo pellentesque viverra pede ac diam cras",
     "carPrice": 84739.54,
-    "carColor": "Violet"
+    "carColor": "Violet",
+    "hotDeal": true
   },
   {
     "carId": 210,
@@ -1887,7 +1948,8 @@
     "carModelYear": 2006,
     "carDescription": "at nunc commodo placerat praesent blandit nam nulla integer pede justo lacinia eget tincidunt eget tempus vel pede morbi porttitor lorem id ligula suspendisse ornare consequat lectus in est risus auctor sed",
     "carPrice": 97628.84,
-    "carColor": "Khaki"
+    "carColor": "Khaki",
+    "hotDeal": true
   },
   {
     "carId": 211,
@@ -1896,7 +1958,8 @@
     "carModelYear": 1969,
     "carDescription": "quam nec dui luctus rutrum nulla tellus in sagittis dui vel nisl duis ac nibh fusce lacus purus aliquet at feugiat non pretium quis lectus suspendisse potenti in eleifend",
     "carPrice": 40074.1,
-    "carColor": "Indigo"
+    "carColor": "Indigo",
+    "hotDeal": true
   },
   {
     "carId": 212,
@@ -1941,7 +2004,8 @@
     "carModelYear": 2003,
     "carDescription": "donec posuere metus vitae ipsum aliquam non mauris morbi non lectus aliquam sit amet diam in magna bibendum imperdiet nullam orci pede venenatis non sodales sed tincidunt eu felis fusce posuere felis sed lacus morbi sem mauris laoreet ut rhoncus aliquet pulvinar sed",
     "carPrice": 47414.84,
-    "carColor": "Mauv"
+    "carColor": "Mauv",
+    "hotDeal": true
   },
   {
     "carId": 217,
@@ -1977,7 +2041,8 @@
     "carModelYear": 2004,
     "carDescription": "nisl venenatis lacinia aenean sit amet justo morbi ut odio cras mi pede malesuada in imperdiet et commodo vulputate justo in blandit ultrices enim lorem ipsum dolor sit amet consectetuer adipiscing elit proin interdum",
     "carPrice": 36124.45,
-    "carColor": "Aquamarine"
+    "carColor": "Aquamarine",
+    "hotDeal": true
   },
   {
     "carId": 221,
@@ -2013,7 +2078,8 @@
     "carModelYear": 2013,
     "carDescription": "quis orci nullam molestie nibh in lectus pellentesque at nulla suspendisse potenti cras in purus eu magna vulputate luctus cum sociis natoque penatibus et magnis dis",
     "carPrice": 20065.93,
-    "carColor": "Red"
+    "carColor": "Red",
+    "hotDeal": true
   },
   {
     "carId": 225,
@@ -2022,7 +2088,8 @@
     "carModelYear": 2000,
     "carDescription": "quisque id justo sit amet sapien dignissim vestibulum vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae nulla dapibus dolor vel est donec odio",
     "carPrice": 13970.42,
-    "carColor": "Fuscia"
+    "carColor": "Fuscia",
+    "hotDeal": true
   },
   {
     "carId": 226,
@@ -2031,7 +2098,8 @@
     "carModelYear": 1984,
     "carDescription": "id luctus nec molestie sed justo pellentesque viverra pede ac diam cras pellentesque volutpat dui maecenas tristique est et tempus semper est quam pharetra magna ac consequat metus sapien ut nunc",
     "carPrice": 17464.08,
-    "carColor": "Maroon"
+    "carColor": "Maroon",
+    "hotDeal": true
   },
   {
     "carId": 227,
@@ -2076,7 +2144,8 @@
     "carModelYear": 2007,
     "carDescription": "libero nullam sit amet turpis elementum ligula vehicula consequat morbi a ipsum integer a nibh in quis justo maecenas rhoncus aliquam lacus morbi quis tortor id nulla ultrices aliquet maecenas leo odio condimentum id",
     "carPrice": 95098.61,
-    "carColor": "Pink"
+    "carColor": "Pink",
+    "hotDeal": true
   },
   {
     "carId": 232,
@@ -2103,7 +2172,8 @@
     "carModelYear": 2012,
     "carDescription": "in magna bibendum imperdiet nullam orci pede venenatis non sodales sed tincidunt eu felis fusce posuere felis sed lacus morbi sem mauris laoreet ut rhoncus aliquet pulvinar sed nisl nunc rhoncus dui vel sem sed sagittis nam congue risus semper porta volutpat quam",
     "carPrice": 29486.63,
-    "carColor": "Violet"
+    "carColor": "Violet",
+    "hotDeal": true
   },
   {
     "carId": 235,
@@ -2112,7 +2182,8 @@
     "carModelYear": 1995,
     "carDescription": "eros elementum pellentesque quisque porta volutpat erat quisque erat eros viverra eget congue eget semper rutrum nulla nunc purus phasellus in felis donec semper sapien a libero nam dui proin leo odio porttitor id consequat in consequat ut nulla sed accumsan felis",
     "carPrice": 74837.26,
-    "carColor": "Violet"
+    "carColor": "Violet",
+    "hotDeal": true
   },
   {
     "carId": 236,
@@ -2157,7 +2228,8 @@
     "carModelYear": 1995,
     "carDescription": "viverra eget congue eget semper rutrum nulla nunc purus phasellus in felis donec semper sapien a libero nam dui proin leo odio porttitor id consequat in consequat ut nulla sed accumsan felis ut at dolor quis odio consequat varius integer ac leo pellentesque ultrices",
     "carPrice": 12885.26,
-    "carColor": "Khaki"
+    "carColor": "Khaki",
+    "hotDeal": true
   },
   {
     "carId": 241,

@@ -16,9 +16,11 @@ export const RightSide = styled.div`
   justify-content: flex-start;
   align-items: center;
 
-  p {
-    :not(:last-of-type) {
-      margin-right: 8px;
-    }
+  a {
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    text-decoration: underline;
+    margin-right: 8px;
   }
 `;

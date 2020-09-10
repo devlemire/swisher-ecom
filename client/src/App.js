@@ -2,16 +2,13 @@ import React, { useState } from "react";
 
 // Components
 import AgeVerification from "components/AgeVerification";
-
-// Components
-import AgeVerification from "components/AgeVerification";
 import NavBar from "components/NavBar";
 
 // Router
 import router from "./utils/router";
 
 // Styles
-import { AppContainer } from "./appStyles";
+import { AppContainer, PageContainer } from "./appStyles";
 
 export default function App() {
   const handleGetVerified = () => {
@@ -34,7 +31,7 @@ export default function App() {
 
       <NavBar />
 
-      {router}
+      <PageContainer>{router}</PageContainer>
     </AppContainer>
   );
 }
