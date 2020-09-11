@@ -21,7 +21,13 @@ export default function NavBar() {
 
         <Link to={routes.cars}>Cars</Link>
 
-        <FontAwesomeIcon icon={faShoppingCart} />
+        <Link to={routes.home}>
+          <FontAwesomeIcon
+            icon={faShoppingCart}
+            style={{ marginRight: "4px" }}
+          />
+          View my Cart (0)
+        </Link>
       </RightSide>
     </NavBarContainer>
   );
