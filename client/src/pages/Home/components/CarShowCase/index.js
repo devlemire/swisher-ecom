@@ -9,8 +9,6 @@ import CarPanel from "./components/CarPanel";
 // Styles
 import { CarsContainer } from "./style";
 
-import { showCaseTypes } from "../../index";
-
 export default function CarShowCase({ type }) {
   const [isLoading, setIsLoading] = useState(true);
   const [cars, setCars] = useState([]);
@@ -22,8 +20,10 @@ export default function CarShowCase({ type }) {
       setIsLoading(false);
     }
 
-    fetchCars();
-  }, []);
+    if (isLoading) {
+      fetchCars();
+    }
+  }, [type, isLoading]);
 
   return (
     <div>

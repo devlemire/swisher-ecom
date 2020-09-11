@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { useHistory } from "react-router-dom";
 
 // Components
 import ActionButton from "components/ActionButton";
@@ -13,8 +14,16 @@ import {
   CarColor,
 } from "./style";
 
+// Routes
+import { routes } from "utils/router";
+
 export default function CarPanel({ carObj }) {
-  console.log("carObj", carObj);
+  const history = useHistory();
+
+  const handleMoreDetail = () => {
+    const routeWithParam = routes.carDetail.replace(":carId", carObj.carId);
+    history.push(routeWithParam);
+  };
 
   return (
     <CarPanelContainer>
@@ -38,7 +47,11 @@ export default function CarPanel({ carObj }) {
         Add to cart
       </ActionButton>
 
-      <ActionButton style={{ width: "100%", marginTop: "8px" }} inverse>
+      <ActionButton
+        style={{ width: "100%", marginTop: "8px" }}
+        inverse
+        onClick={handleMoreDetail}
+      >
         More Details
       </ActionButton>
     </CarPanelContainer>
