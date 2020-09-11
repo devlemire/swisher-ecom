@@ -7,6 +7,7 @@ import {
   Backdrop,
   Modal,
   ActionsContainer,
+  GlobalStyle,
 } from "./style";
 
 // Components
@@ -25,6 +26,7 @@ export default function AgeVerification({ setAgeVerified }) {
 
   return (
     <AgeVerificationContainer>
+      <GlobalStyle />
       <Backdrop />
 
       <Modal>

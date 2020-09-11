@@ -1,4 +1,10 @@
-import styled from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
+
+export const GlobalStyle = createGlobalStyle`
+  html, body {
+    overflow: hidden;
+  }
+`;
 
 export const AgeVerificationContainer = styled.div`
   width: 100%;
