@@ -1,11 +1,15 @@
 import styled from "styled-components";
 
 export const NavBarContainer = styled.div`
+  z-index: 2;
   width: 100%;
   background-color: #0d47a1;
   padding: 8px 16px;
   color: white;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  box-shadow: ${(p) =>
+    p.hideBoxShadow
+      ? "none"
+      : "0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24)"};
 
   display: flex;
   justify-content: space-between;

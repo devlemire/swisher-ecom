@@ -4,7 +4,7 @@ import axios from "axios";
 
 // Components
 import Loader from "react-loader-spinner";
-import CarPanel from "./components/CarPanel";
+import CarPanel from "components/CarPanel";
 
 // Styles
 import { CarsContainer } from "./style";

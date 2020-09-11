@@ -85,3 +85,28 @@ exports.getCarById = (req, res, next) => {
     return sendError(err, res);
   }
 };
+
+exports.getUniqueListOfCarMake = (req, res, next) => {
+  try {
+    if (databaseDown()) {
+      return sendError("Cars database is down", res);
+    }
+
+    const uniqueCarMakes = {};
+
+    cars.forEach((carObj) => {
+      if (!uniqueCarMakes[carObj.carMake]) {
+        uniqueCarMakes[carObj.carMake] = {
+          cars: [],
+        };
+      }
+
+      uniqueCarMakes[carObj.carMake].cars.push(carObj);
+    });
+
+    res.status(200).send(uniqueCarMakes);
+  } catch (err) {
+    console.error("getUniqueListOfCarMake failed in cars_controller:", err);
+    return sendError(err, res);
+  }
+};
