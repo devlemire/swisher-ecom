@@ -10,6 +10,9 @@ const app = express();
 // Environment Variables
 const { SERVER_PORT, NODE_ENV } = process.env;
 
+// Read JSON from request
+app.use(express.json());
+
 // Middleware for logging requests
 app.use(morgan("dev"));
 

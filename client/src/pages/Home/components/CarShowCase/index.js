@@ -15,9 +15,14 @@ export default function CarShowCase({ type }) {
 
   useEffect(() => {
     async function fetchCars() {
-      const { data } = await axios.get(`/api/v1/cars/${type}`);
-      setCars(data);
-      setIsLoading(false);
+      try {
+        const { data } = await axios.get(`/api/v1/cars/${type}`);
+        setCars(data);
+      } catch (err) {
+        console.error("Failed to fetch the car showcase:", err);
+      } finally {
+        setIsLoading(false);
+      }
     }
 
     if (isLoading) {
