@@ -7,13 +7,16 @@ import { NavBarContainer, RightSide } from "./style";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 
-// Route Links
+// Routing
 import { Link } from "react-router-dom";
 import { routes } from "utils/router";
+import { useHistory } from "react-router-dom";
 
 export default function NavBar() {
+  const history = useHistory();
+
   return (
-    <NavBarContainer>
+    <NavBarContainer hideBoxShadow={history.location.pathname === routes.cars}>
       <h1 style={{ fontSize: "21px" }}>Catch A Ride!</h1>
 
       <RightSide>
