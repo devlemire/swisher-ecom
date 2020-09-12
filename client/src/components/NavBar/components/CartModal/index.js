@@ -26,6 +26,7 @@ import { routes } from "utils/router";
 
 function CartModal({
   onClose,
+  openCartModalRef,
 
   // Redux
   carsInCart,
@@ -49,7 +50,8 @@ function CartModal({
     function handleMouseDown(event) {
       if (
         containerRef.current &&
-        !containerRef.current.contains(event.target)
+        !containerRef.current.contains(event.target) &&
+        !openCartModalRef.current.contains(event.target)
       ) {
         onClose();
       }
@@ -60,7 +62,7 @@ function CartModal({
     return () => {
       document.removeEventListener("mousedown", handleMouseDown);
     };
-  }, [onClose]);
+  }, [onClose, openCartModalRef]);
 
   const handleViewCheckout = () => {
     history.push(routes.checkout);
@@ -113,6 +115,7 @@ function CartModal({
 CartModal.propTypes = {
   totalPrice: PropTypes.string.isRequired,
   carsInCart: PropTypes.array.isRequired,
+  openCartModalRef: PropTypes.object.isRequired,
 };
 
 export default connect((state) => {

@@ -17,11 +17,12 @@ function Checkout({
   cart,
   cartInitialized,
   checkout,
+  cartLength,
 }) {
   return (
     cartInitialized && (
       <CheckoutContainer>
-        <h1>Checkout</h1>
+        <h1>Checkout - {cartLength} Cars</h1>
 
         {cart.carsInCart.length === 0 && (
           <p style={{ marginTop: "24px" }}>Uh oh! Your cart is empty</p>
@@ -54,6 +55,7 @@ Checkout.propTypes = {
   cartInitialized: PropTypes.bool.isRequired,
   cart: PropTypes.object.isRequired,
   checkout: PropTypes.func.isRequired,
+  cartLength: PropTypes.number.isRequired,
 };
 
 export default connect(
@@ -63,6 +65,9 @@ export default connect(
     return {
       cartInitialized: store.initialized,
       cart: store.cart,
+      cartLength: store.cart.carsInCart.reduce((total, next) => {
+        return total + next.quantity;
+      }, 0),
     };
   },
   { checkout }

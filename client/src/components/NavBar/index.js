@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import PropTypes from "prop-types";
 
 // Components
@@ -21,6 +21,7 @@ import { connect } from "react-redux";
 
 function NavBar({ cartLength }) {
   const history = useHistory();
+  const openCartModalRef = useRef();
 
   const [cartModalVisible, setCartModalVisible] = useState(false);
 
@@ -36,7 +37,10 @@ function NavBar({ cartLength }) {
 
         <Link to={routes.cars}>Cars</Link>
 
-        <CartModalLink onClick={handleToggleModalVisible}>
+        <CartModalLink
+          onClick={handleToggleModalVisible}
+          ref={openCartModalRef}
+        >
           <FontAwesomeIcon
             icon={faShoppingCart}
             style={{ marginRight: "4px" }}
@@ -46,7 +50,10 @@ function NavBar({ cartLength }) {
       </RightSide>
 
       {cartModalVisible && (
-        <CartModal onClose={() => setCartModalVisible(false)} />
+        <CartModal
+          onClose={() => setCartModalVisible(false)}
+          openCartModalRef={openCartModalRef}
+        />
       )}
     </NavBarContainer>
   );
@@ -60,6 +67,8 @@ export default connect((state) => {
   const store = state.cart;
 
   return {
-    cartLength: store.cart.carsInCart.length,
+    cartLength: store.cart.carsInCart.reduce((total, next) => {
+      return total + next.quantity;
+    }, 0),
   };
 }, {})(NavBar);
