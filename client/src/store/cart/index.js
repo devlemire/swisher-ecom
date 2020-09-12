@@ -103,16 +103,24 @@ export const updateQuantityOfCartItem = (cartIndex, newQuantity) => (
 export const removeFromCart = (cartIndex) => (dispatch, getState) => {
   try {
     const {
-      cart: { carsInCart },
+      cart: { inCartLookup, carsInCart },
     } = getState();
 
+    let inCartLookupClone = cloneDeep(inCartLookup);
     let carsInCartClone = cloneDeep(carsInCart);
+    let carObjClone = carsInCartClone[cartIndex];
+
+    delete inCartLookupClone[carObjClone.carId];
     carsInCartClone.splice(cartIndex, 1);
 
     const newTotal = calculateTotal(carsInCartClone);
 
+    console.log("carObjClone", carObjClone);
+
     dispatch(SET_TOTAL(newTotal));
     dispatch(SET_CARS_IN_CART(carsInCartClone));
+    dispatch(SET_IN_CART_LOOKUP(inCartLookupClone));
+    dispatch(SET_RE_RENDER_CAR_ID(carObjClone.carId));
   } catch (err) {
     console.error("removeFromCart failed in store/cart failed:", err);
   }
