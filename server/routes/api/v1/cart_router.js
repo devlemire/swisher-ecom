@@ -12,6 +12,8 @@ const validate_quantity = require("../../../middlewares/validate_quantity");
 
 Router.get("/", cart_controller.getSessionCart);
 
+Router.post("/checkout", validate_hasCart, cart_controller.checkout);
+
 Router.post(
   "/add/:carId",
   validate_hasCart,

@@ -2,6 +2,13 @@ const sendError = require("../utils/sendError");
 const cars = require("../data/cars.json");
 const cloneDeep = require("lodash.clonedeep");
 
+const generateFreshCart = () => ({
+  total: Number(0).toFixed(2),
+  inCartLookup: {},
+  carsInCart: [],
+  reRenderCarId: undefined,
+});
+
 function calculateTotal(cart) {
   return cart
     .reduce((total, next) => {
@@ -13,12 +20,7 @@ function calculateTotal(cart) {
 exports.getSessionCart = (req, res, next) => {
   try {
     if (req.session.cart === undefined) {
-      req.session.cart = {
-        total: Number(0).toFixed(2),
-        inCartLookup: {},
-        carsInCart: [],
-        reRenderCarId: undefined,
-      };
+      req.session.cart = generateFreshCart();
     }
 
     res.status(200).send(req.session.cart);
@@ -103,6 +105,16 @@ exports.updateQuantity = (req, res, next) => {
     res.status(200).send(req.session.cart);
   } catch (err) {
     console.error("updateQuantity failed in cart_controller.js:", err);
+    sendError(err, res);
+  }
+};
+
+exports.checkout = (req, res, next) => {
+  try {
+    req.session.cart = generateFreshCart();
+    res.status(200).send(req.session.cart);
+  } catch (err) {
+    console.error("checkout failed in cart_controller.js", err);
     sendError(err, res);
   }
 };

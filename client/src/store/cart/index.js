@@ -60,11 +60,12 @@ export const updateQuantityOfCartItem = (carObj, newQuantity) => async (
   getState
 ) => {
   try {
-    const {
-      data: cart,
-    } = await axios.put(`/api/v1/cart/update/quantity/${carObj.carId}`, {
-      quantity: newQuantity,
-    });
+    const { data: cart } = await axios.put(
+      `/api/v1/cart/update/quantity/${carObj.carId}`,
+      {
+        quantity: newQuantity,
+      }
+    );
 
     dispatch(SET_CART(cart));
   } catch (err) {
@@ -85,5 +86,14 @@ export const removeFromCart = (carObj) => async (dispatch, getState) => {
     dispatch(SET_RE_RENDER_CAR_ID(carObj.carId));
   } catch (err) {
     console.error("removeFromCart failed in store/cart failed:", err);
+  }
+};
+
+export const checkout = () => async (dispatch, getState) => {
+  try {
+    const { data: cart } = await axios.post(`/api/v1/cart/checkout`);
+    dispatch(SET_CART(cart));
+  } catch (err) {
+    console.error("checkout failed in store/cart failed:", err);
   }
 };

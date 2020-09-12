@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 // Components
 import ActionButton from "components/ActionButton";
-import CarLineItem from "./components/CarLineItem";
+import CarLineItem from "components/CarLineItem";
 
 // Styles
 import {
@@ -20,6 +20,10 @@ import { connect } from "react-redux";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
 
+// Routing
+import { useHistory } from "react-router-dom";
+import { routes } from "utils/router";
+
 function CartModal({
   onClose,
 
@@ -27,6 +31,7 @@ function CartModal({
   carsInCart,
   totalPrice,
 }) {
+  const history = useHistory();
   const [totalCarCount, setTotalCarCount] = useState(0);
   const containerRef = useRef();
 
@@ -56,6 +61,11 @@ function CartModal({
       document.removeEventListener("mousedown", handleMouseDown);
     };
   }, [onClose]);
+
+  const handleViewCheckout = () => {
+    history.push(routes.checkout);
+    onClose();
+  };
 
   return (
     <CartModalContainer ref={containerRef}>
@@ -92,6 +102,7 @@ function CartModal({
         inverse
         style={{ width: "100%", marginTop: "24px" }}
         disabled={carsInCart.length === 0}
+        onClick={handleViewCheckout}
       >
         View Checkout
       </ActionButton>
