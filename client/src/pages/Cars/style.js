@@ -18,6 +18,7 @@ export const CarMake = styled.div`
   justify-content: flex-start;
 
   h1 {
+    z-index: 1;
     font-size: 26px;
     width: 100%;
     position: sticky;
