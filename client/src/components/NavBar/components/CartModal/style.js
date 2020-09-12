@@ -40,3 +40,11 @@ export const CarsInCartContainer = styled.div`
   margin-top: 24px;
   padding-right: 16px;
 `;
+
+export const Row = styled.div`
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;

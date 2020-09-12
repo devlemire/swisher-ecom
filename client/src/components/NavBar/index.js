@@ -45,7 +45,9 @@ function NavBar({ cartLength }) {
         </CartModalLink>
       </RightSide>
 
-      {cartModalVisible && <CartModal />}
+      {cartModalVisible && (
+        <CartModal onClose={() => setCartModalVisible(false)} />
+      )}
     </NavBarContainer>
   );
 }
@@ -58,6 +60,6 @@ export default connect((state) => {
   const store = state.cart;
 
   return {
-    cartLength: store.carsInCart.length,
+    cartLength: store.cart.carsInCart.length,
   };
 }, {})(NavBar);

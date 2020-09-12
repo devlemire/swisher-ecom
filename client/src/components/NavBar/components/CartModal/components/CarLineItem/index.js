@@ -14,7 +14,6 @@ import { faTrashAlt } from "@fortawesome/free-solid-svg-icons";
 
 function CarLineItem({
   carObj,
-  cartIndex,
 
   // Redux
   updateQuantityOfCartItem,
@@ -22,11 +21,11 @@ function CarLineItem({
 }) {
   const handleUpdateQuantity = (e) => {
     const quantity = Number(e.target.value);
-    updateQuantityOfCartItem(cartIndex, quantity);
+    updateQuantityOfCartItem(carObj, quantity);
   };
 
   const handleRemove = () => {
-    removeFromCart(cartIndex);
+    removeFromCart(carObj);
   };
 
   return (
@@ -51,7 +50,7 @@ function CarLineItem({
         <Row style={{ marginTop: "16px" }}>
           <p style={{ marginRight: "8px" }}>Quantity: </p>
 
-          <select onChange={handleUpdateQuantity}>
+          <select onChange={handleUpdateQuantity} value={carObj.quantity}>
             {new Array(10).fill(null).map((nothing, index) => (
               <option key={`select-option-${index}`} value={index + 1}>
                 {index + 1}
@@ -68,7 +67,6 @@ function CarLineItem({
 
 CarLineItem.propTypes = {
   carObj: PropTypes.object.isRequired,
-  cartIndex: PropTypes.number.isRequired,
 
   // Redux,
   updateQuantityOfCartItem: PropTypes.func.isRequired,

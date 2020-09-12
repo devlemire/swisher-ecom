@@ -93,7 +93,7 @@ export default connect(
     const store = state.cart;
 
     return {
-      inCartLookup: store.inCartLookup,
+      inCartLookup: store.cart.inCartLookup,
       reRenderCarId: store.reRenderCarId,
     };
   },

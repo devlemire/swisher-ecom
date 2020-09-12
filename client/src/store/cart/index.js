@@ -1,32 +1,26 @@
 import { handleActions, createAction } from "redux-actions";
-import cloneDeep from "lodash.clonedeep";
+import axios from "axios";
 
 const defaultState = {
-  total: 0.0,
-  inCartLookup: {},
-  carsInCart: [],
+  initialized: false,
+  cart: {},
   reRenderCarId: undefined,
 };
 
 const storePrefix = "cart/";
-const SET_CARS_IN_CART = createAction(`${storePrefix}SET_CARS_IN_CART`);
-const SET_TOTAL = createAction(`${storePrefix}SET_TOTAL`);
-const SET_IN_CART_LOOKUP = createAction(`${storePrefix}SET_IN_CART_LOOKUP`);
+const SET_INITIALIZED = createAction(`${storePrefix}SET_INITIALIZED`);
+const SET_CART = createAction(`${storePrefix}SET_CART`);
 const SET_RE_RENDER_CAR_ID = createAction(`${storePrefix}SET_RE_RENDER_CAR_ID`);
 
 export default handleActions(
   {
-    [SET_CARS_IN_CART]: (state, { payload }) => ({
+    [SET_INITIALIZED]: (state, { payload }) => ({
       ...state,
-      carsInCart: payload,
+      initialized: payload,
     }),
-    [SET_TOTAL]: (state, { payload }) => ({
+    [SET_CART]: (state, { payload }) => ({
       ...state,
-      total: payload,
-    }),
-    [SET_IN_CART_LOOKUP]: (state, { payload }) => ({
-      ...state,
-      inCartLookup: payload,
+      cart: payload,
     }),
     [SET_RE_RENDER_CAR_ID]: (state, { payload }) => ({
       ...state,
@@ -36,64 +30,43 @@ export default handleActions(
   defaultState
 );
 
-function calculateTotal(cart) {
-  return cart
-    .reduce((total, next) => {
-      return total + next.carPrice * next.quantity;
-    }, 0)
-    .toFixed(2);
-}
-
-export const addToCart = (carObj) => (dispatch, getState) => {
+export const initializeCart = () => async (dispatch, getState) => {
   try {
-    const {
-      cart: { inCartLookup, carsInCart },
-    } = getState();
+    const { cart } = getState();
 
-    const carObjClone = cloneDeep(carObj);
-    const inCartLookupClone = cloneDeep(inCartLookup);
-    const carsInCartClone = cloneDeep(carsInCart);
-
-    if (!carObj || typeof carObj !== "object") {
-      return console.error("No car was provided to add to the cart");
+    if (!cart.initialized) {
+      const { data } = await axios.get("/api/v1/cart");
+      dispatch(SET_CART(data));
+      dispatch(SET_INITIALIZED(true));
     }
+  } catch (err) {
+    console.error("initializeCart failed in store/cart:", err);
+  }
+};
 
-    if (inCartLookup[carObj.carId]) {
-      return console.error("The car is already in the cart");
-    }
+export const addToCart = (carObj) => async (dispatch, getState) => {
+  try {
+    const { data: cart } = await axios.post(`/api/v1/cart/add/${carObj.carId}`);
 
-    carObjClone.quantity = 1;
-    inCartLookupClone[carObjClone.carId] = true;
-    carsInCartClone.push(carObjClone);
-
-    const newTotal = calculateTotal(carsInCartClone);
-
-    dispatch(SET_TOTAL(newTotal));
-    dispatch(SET_CARS_IN_CART(carsInCartClone));
-    dispatch(SET_IN_CART_LOOKUP(inCartLookupClone));
-    dispatch(SET_RE_RENDER_CAR_ID(carObjClone.carId));
+    dispatch(SET_CART(cart));
+    dispatch(SET_RE_RENDER_CAR_ID(carObj.carId));
   } catch (err) {
     console.error("addToCart in store/cart failed:", err);
   }
 };
 
-export const updateQuantityOfCartItem = (cartIndex, newQuantity) => (
+export const updateQuantityOfCartItem = (carObj, newQuantity) => async (
   dispatch,
   getState
 ) => {
   try {
     const {
-      cart: { carsInCart },
-    } = getState();
+      data: cart,
+    } = await axios.put(`/api/v1/cart/update/quantity/${carObj.carId}`, {
+      quantity: newQuantity,
+    });
 
-    const carsInCartClone = cloneDeep(carsInCart);
-    const carObj = carsInCartClone[cartIndex];
-
-    carObj.quantity = newQuantity;
-    const newTotal = calculateTotal(carsInCartClone);
-
-    dispatch(SET_TOTAL(newTotal));
-    dispatch(SET_CARS_IN_CART(carsInCartClone));
+    dispatch(SET_CART(cart));
   } catch (err) {
     console.error(
       "updatedQuantityOfCartItem failed in store/cart failed:",
@@ -102,27 +75,14 @@ export const updateQuantityOfCartItem = (cartIndex, newQuantity) => (
   }
 };
 
-export const removeFromCart = (cartIndex) => (dispatch, getState) => {
+export const removeFromCart = (carObj) => async (dispatch, getState) => {
   try {
-    const {
-      cart: { inCartLookup, carsInCart },
-    } = getState();
+    const { data: cart } = await axios.delete(
+      `/api/v1/cart/remove/${carObj.carId}`
+    );
 
-    let inCartLookupClone = cloneDeep(inCartLookup);
-    let carsInCartClone = cloneDeep(carsInCart);
-    let carObjClone = carsInCartClone[cartIndex];
-
-    delete inCartLookupClone[carObjClone.carId];
-    carsInCartClone.splice(cartIndex, 1);
-
-    const newTotal = calculateTotal(carsInCartClone);
-
-    console.log("carObjClone", carObjClone);
-
-    dispatch(SET_TOTAL(newTotal));
-    dispatch(SET_CARS_IN_CART(carsInCartClone));
-    dispatch(SET_IN_CART_LOOKUP(inCartLookupClone));
-    dispatch(SET_RE_RENDER_CAR_ID(carObjClone.carId));
+    dispatch(SET_CART(cart));
+    dispatch(SET_RE_RENDER_CAR_ID(carObj.carId));
   } catch (err) {
     console.error("removeFromCart failed in store/cart failed:", err);
   }

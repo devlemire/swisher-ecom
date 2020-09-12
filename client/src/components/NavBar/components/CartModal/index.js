@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import PropTypes from "prop-types";
 
 // Components
@@ -6,13 +6,29 @@ import ActionButton from "components/ActionButton";
 import CarLineItem from "./components/CarLineItem";
 
 // Styles
-import { CartModalContainer, CartModalTop, CarsInCartContainer } from "./style";
+import {
+  CartModalContainer,
+  CartModalTop,
+  CarsInCartContainer,
+  Row,
+} from "./style";
 
 // Redux
 import { connect } from "react-redux";
 
-function CartModal({ carsInCart, totalPrice }) {
+// Icons
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTimes } from "@fortawesome/free-solid-svg-icons";
+
+function CartModal({
+  onClose,
+
+  // Redux
+  carsInCart,
+  totalPrice,
+}) {
   const [totalCarCount, setTotalCarCount] = useState(0);
+  const containerRef = useRef();
 
   useEffect(() => {
     let carCount = 0;
@@ -24,28 +40,49 @@ function CartModal({ carsInCart, totalPrice }) {
     setTotalCarCount(carCount);
   }, [carsInCart]);
 
+  useEffect(() => {
+    function handleMouseDown(event) {
+      if (
+        containerRef.current &&
+        !containerRef.current.contains(event.target)
+      ) {
+        onClose();
+      }
+    }
+
+    document.addEventListener("mousedown", handleMouseDown);
+
+    return () => {
+      document.removeEventListener("mousedown", handleMouseDown);
+    };
+  }, [onClose]);
+
   return (
-    <CartModalContainer>
+    <CartModalContainer ref={containerRef}>
       <CartModalTop>
-        <h1>
-          Your cart
-          {carsInCart.length > 0
-            ? ` - ${totalCarCount} car${
-                totalCarCount > 1 ? "s" : ""
-              } ($ ${totalPrice})`
-            : ""}
-        </h1>
+        <Row>
+          <h1>
+            Your cart
+            {carsInCart.length > 0
+              ? ` - ${totalCarCount} car${
+                  totalCarCount > 1 ? "s" : ""
+                } ($ ${totalPrice})`
+              : ""}
+          </h1>
+
+          <FontAwesomeIcon
+            icon={faTimes}
+            onClick={onClose}
+            style={{ cursor: "pointer" }}
+          />
+        </Row>
 
         {carsInCart.length === 0 && <p>Uh oh! Your cart is empty.</p>}
 
         {carsInCart.length > 0 && (
           <CarsInCartContainer>
             {carsInCart.map((carObj, cartIndex) => (
-              <CarLineItem
-                key={`car-${carObj.carId}`}
-                carObj={carObj}
-                cartIndex={cartIndex}
-              />
+              <CarLineItem key={`car-${carObj.carId}`} carObj={carObj} />
             ))}
           </CarsInCartContainer>
         )}
@@ -63,7 +100,7 @@ function CartModal({ carsInCart, totalPrice }) {
 }
 
 CartModal.propTypes = {
-  totalPrice: PropTypes.number.isRequired,
+  totalPrice: PropTypes.string.isRequired,
   carsInCart: PropTypes.array.isRequired,
 };
 
@@ -71,7 +108,7 @@ export default connect((state) => {
   const store = state.cart;
 
   return {
-    totalPrice: store.total,
-    carsInCart: store.carsInCart,
+    totalPrice: store.cart.total,
+    carsInCart: store.cart.carsInCart,
   };
 }, {})(CartModal);
