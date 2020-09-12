@@ -11,10 +11,16 @@ import * as serviceWorker from "./utils/serviceWorker";
 // Routing
 import { BrowserRouter } from "react-router-dom";
 
+// Redux
+import { Provider } from "react-redux";
+import store from "./store";
+
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-      <App />
+      <Provider store={store}>
+        <App />
+      </Provider>
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById("root")

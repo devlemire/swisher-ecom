@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
+import PropTypes from "prop-types";
+
+// Components
+import CartModal from "./components/CartModal";
 
 // Styles
-import { NavBarContainer, RightSide } from "./style";
+import { NavBarContainer, RightSide, CartModalLink } from "./style";
 
 // Icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -12,8 +16,16 @@ import { Link } from "react-router-dom";
 import { routes } from "utils/router";
 import { useHistory } from "react-router-dom";
 
-export default function NavBar() {
+// Redux
+import { connect } from "react-redux";
+
+function NavBar({ cartLength }) {
   const history = useHistory();
+
+  const [cartModalVisible, setCartModalVisible] = useState(false);
+
+  const handleToggleModalVisible = () =>
+    setCartModalVisible((cartModalVisible) => !cartModalVisible);
 
   return (
     <NavBarContainer hideBoxShadow={history.location.pathname === routes.cars}>
@@ -24,14 +36,30 @@ export default function NavBar() {
 
         <Link to={routes.cars}>Cars</Link>
 
-        <Link to={routes.home}>
+        <CartModalLink onClick={handleToggleModalVisible}>
           <FontAwesomeIcon
             icon={faShoppingCart}
             style={{ marginRight: "4px" }}
           />
-          View my Cart (0)
-        </Link>
+          <p>View my Cart ({cartLength})</p>
+        </CartModalLink>
       </RightSide>
+
+      {cartModalVisible && (
+        <CartModal onClose={() => setCartModalVisible(false)} />
+      )}
     </NavBarContainer>
   );
 }
+
+NavBar.propTypes = {
+  cartLength: PropTypes.number,
+};
+
+export default connect((state) => {
+  const store = state.cart;
+
+  return {
+    cartLength: store.cart.carsInCart.length,
+  };
+}, {})(NavBar);

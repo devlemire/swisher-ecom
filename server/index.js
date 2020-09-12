@@ -3,18 +3,26 @@ const express = require("express");
 const path = require("path");
 const v1Router = require("./routes/api/v1");
 const morgan = require("morgan");
+const session = require("express-session");
 
 // Create an express server
 const app = express();
 
 // Environment Variables
-const { SERVER_PORT, NODE_ENV } = process.env;
+const { SERVER_PORT, NODE_ENV, SESSION_SECRET } = process.env;
 
-// Read JSON from request
+// Server Middleware
 app.use(express.json());
-
-// Middleware for logging requests
 app.use(morgan("dev"));
+app.set("trust proxy", 1);
+app.use(
+  session({
+    secret: SESSION_SECRET,
+    resave: false,
+    saveUninitialized: true,
+    cookie: { secure: NODE_ENV === "production" ? true : false },
+  })
+);
 
 // Serve client assets
 app.use(express.static(`${__dirname}/../client/build`));

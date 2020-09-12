@@ -33,3 +33,18 @@ export const RightSide = styled.div`
     margin-right: 8px;
   }
 `;
+
+export const CartModalLink = styled.div`
+  cursor: pointer;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  p {
+    color: white;
+    font-size: 18px;
+    text-decoration: underline;
+    user-select: none;
+  }
+`;

@@ -45,7 +45,7 @@ export default function Cars() {
             const uniqueCarMakeObj = uniqueCarMakes[carMakeKey];
 
             return (
-              <CarMake>
+              <CarMake key={`carMake-${carMakeKey}`}>
                 <h1>{carMakeKey}</h1>
 
                 <CarsContainer>

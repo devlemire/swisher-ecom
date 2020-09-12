@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import PropTypes from "prop-types";
 import axios from "axios";
 
 // Components
@@ -21,7 +22,17 @@ import {
 import { routes } from "utils/router";
 import { useHistory } from "react-router-dom";
 
-export default function CarDetail({ match }) {
+// Redux
+import { connect } from "react-redux";
+import { addToCart } from "store/cart";
+
+function CarDetail({
+  match,
+
+  // Redux
+  inCartLookup,
+  addToCart,
+}) {
   const history = useHistory();
 
   const [isLoading, setIsLoading] = useState(true);
@@ -48,6 +59,10 @@ export default function CarDetail({ match }) {
 
   const handleBrowseOther = () => {
     history.push(routes.home);
+  };
+
+  const handleAddToCart = () => {
+    addToCart(carObj);
   };
 
   return (
@@ -78,7 +93,12 @@ export default function CarDetail({ match }) {
             <CarColor>Car Color: {carObj.carColor}</CarColor>
 
             <ActionsContainer>
-              <ActionButton>Add to cart</ActionButton>
+              <ActionButton
+                disabled={!!inCartLookup[carObj.carId]}
+                onClick={handleAddToCart}
+              >
+                Add to cart
+              </ActionButton>
 
               <ActionSpan
                 style={{ marginLeft: "8px" }}
@@ -93,3 +113,22 @@ export default function CarDetail({ match }) {
     </CarDetailContainer>
   );
 }
+
+CarDetail.propTypes = {
+  match: PropTypes.object.isRequired,
+
+  // Redux
+  inCartLookup: PropTypes.object.isRequired,
+  addToCart: PropTypes.func.isRequired,
+};
+
+export default connect(
+  (state) => {
+    const store = state.cart;
+
+    return {
+      inCartLookup: store.cart.inCartLookup,
+    };
+  },
+  { addToCart }
+)(CarDetail);
