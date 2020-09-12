@@ -37,9 +37,11 @@ export default handleActions(
 );
 
 function calculateTotal(cart) {
-  return cart.reduce((total, next) => {
-    return total + next.carPrice * next.quantity;
-  }, 0);
+  return cart
+    .reduce((total, next) => {
+      return total + next.carPrice * next.quantity;
+    }, 0)
+    .toFixed(2);
 }
 
 export const addToCart = (carObj) => (dispatch, getState) => {
